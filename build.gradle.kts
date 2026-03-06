@@ -1,5 +1,5 @@
 plugins {
-    id("java")
+    id("java-library")
 }
 
 group = "com.bindglam.database"
@@ -10,6 +10,6 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.zaxxer:HikariCP:7.0.2")
-    compileOnly("redis.clients:jedis:7.1.0")
+    api("com.zaxxer:HikariCP:7.0.2")
+    api("redis.clients:jedis:7.1.0")
 }

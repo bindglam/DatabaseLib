@@ -56,7 +56,7 @@ public final class SQLiteDatabase implements Database<Connection, SQLException> 
 
     private Connection ensureConnection() {
         try {
-            if(this.connection == null || this.connection.isValid(validTimeout)) {
+            if(this.connection == null || this.connection.isClosed() || !this.connection.isValid(validTimeout)) {
                 this.disconnect();
                 this.connect();
             }
@@ -68,7 +68,7 @@ public final class SQLiteDatabase implements Database<Connection, SQLException> 
     }
 
     @Override
-    public void getResource(ResourceConsumer<Connection, SQLException> consumer) {
+    public synchronized void getResource(ResourceConsumer<Connection, SQLException> consumer) {
         try {
             consumer.accept(ensureConnection());
         } catch (SQLException e) {

@@ -1,4 +1,4 @@
-package com.bindglam.database;
+package io.github.bindglam.database;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

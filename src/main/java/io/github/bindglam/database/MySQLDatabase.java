@@ -1,11 +1,9 @@
-package com.bindglam.database;
+package io.github.bindglam.database;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
-import java.io.File;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public final class MySQLDatabase implements Database<Connection, SQLException> {

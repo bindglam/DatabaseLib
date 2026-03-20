@@ -1,4 +1,4 @@
-package com.bindglam.database;
+package io.github.bindglam.database;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;

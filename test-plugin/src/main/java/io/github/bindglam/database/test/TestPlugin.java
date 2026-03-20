@@ -1,7 +1,7 @@
 package io.github.bindglam.database.test;
 
-import com.bindglam.database.Database;
-import com.bindglam.database.SQLiteDatabase;
+import io.github.bindglam.database.Database;
+import io.github.bindglam.database.SQLiteDatabase;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;

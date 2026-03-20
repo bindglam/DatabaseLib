@@ -1,4 +1,4 @@
-package com.bindglam.database;
+package io.github.bindglam.database;
 
 public interface Database<R, E extends Exception> {
     void start();

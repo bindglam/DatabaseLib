@@ -1,4 +1,4 @@
-package com.bindglam.database;
+package io.github.bindglam.database;
 
 @FunctionalInterface
 public interface ResourceConsumer<C, E extends Exception> {

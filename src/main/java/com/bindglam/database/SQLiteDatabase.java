@@ -31,7 +31,7 @@ public final class SQLiteDatabase implements Database<Connection, SQLException> 
         HikariConfig hikariConfig = new HikariConfig();
         hikariConfig.setJdbcUrl("jdbc:sqlite://" + file.getPath());
         hikariConfig.setAutoCommit(autoCommit);
-        hikariConfig.setValidationTimeout(validTimeout*1000L);
+        hikariConfig.setValidationTimeout(validTimeout);
         hikariConfig.setMaximumPoolSize(1);
 
         this.dataSource = new HikariDataSource(hikariConfig);

@@ -2,11 +2,19 @@ plugins {
     id("java-library")
 }
 
-group = "com.bindglam.database"
-version = "1.0-SNAPSHOT"
+allprojects {
+    apply(plugin = "java-library")
 
-repositories {
-    mavenCentral()
+    group = "com.bindglam.database"
+    version = "1.0-SNAPSHOT"
+
+    repositories {
+        mavenCentral()
+        maven("https://repo.papermc.io/repository/maven-public/")
+    }
+
+    dependencies {
+    }
 }
 
 dependencies {

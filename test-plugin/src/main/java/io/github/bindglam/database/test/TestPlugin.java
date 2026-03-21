@@ -14,7 +14,7 @@ public class TestPlugin extends JavaPlugin {
         if(!getDataFolder().exists())
             getDataFolder().mkdirs();
 
-        sqlDatabase = new H2Database(new File(getDataFolder(), "database.db"), true, 5000, 10);
+        sqlDatabase = new H2Database(new File(getDataFolder(), "database.db"), true, 5000);
         sqlDatabase.start();
     }
 

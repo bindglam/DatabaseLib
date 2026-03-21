@@ -5,8 +5,8 @@ import com.zaxxer.hikari.HikariConfig;
 import java.io.File;
 
 public final class H2Database extends SQLDatabase {
-    public H2Database(File file, boolean autoCommit, int validTimeout, int maxPoolSize) {
-        super("jdbc:h2:" + file.getAbsolutePath(), autoCommit, validTimeout, maxPoolSize);
+    public H2Database(File file, boolean autoCommit, int validTimeout) {
+        super("jdbc:h2:" + file.getAbsolutePath(), autoCommit, validTimeout, 1);
     }
 
     @Override

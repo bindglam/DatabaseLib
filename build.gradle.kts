@@ -20,4 +20,5 @@ allprojects {
 dependencies {
     api("com.zaxxer:HikariCP:7.0.2")
     api("redis.clients:jedis:7.1.0")
+    api("com.h2database:h2:2.4.240")
 }

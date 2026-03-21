@@ -4,15 +4,15 @@ import com.zaxxer.hikari.HikariConfig;
 
 import java.io.File;
 
-public final class SQLiteDatabase extends SQLDatabase {
-    public SQLiteDatabase(File file, boolean autoCommit, int validTimeout) {
-        super("jdbc:sqlite:" + file.getAbsolutePath(), autoCommit, validTimeout, 1);
+public final class H2Database extends SQLDatabase {
+    public H2Database(File file, boolean autoCommit, int validTimeout, int maxPoolSize) {
+        super("jdbc:h2:" + file.getAbsolutePath(), autoCommit, validTimeout, maxPoolSize);
     }
 
     @Override
     protected void loadDriver() {
         try {
-            Class.forName("org.sqlite.JDBC");
+            Class.forName("org.h2.Driver");
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
